@@ -13,7 +13,7 @@ const VideoAnswer = () => {
 
 	const [recordedVideo, setRecordedVideo] = useState<string>('');
 
-	const [videoChunks, setVideoChunks] = useState<any[]>([]);
+	const [videoChunks, setVideoChunks] = useState([]);
 
 
 	const startRecording = async () => {
@@ -53,7 +53,7 @@ const VideoAnswer = () => {
 
 		mediaRecorder.current.start();
 
-		let localVideoChunks: any[] = [];
+		let localVideoChunks = [];
 
 		mediaRecorder.current.ondataavailable = (event) => {
 			if (typeof event.data === "undefined") return;
@@ -70,7 +70,7 @@ const VideoAnswer = () => {
     if (mediaRecorder.current) {
       mediaRecorder.current.stop();
 
-		mediaRecorder.current!.onstop = () => {
+		mediaRecorder.current.onstop = () => {
 			const videoBlob = new Blob(videoChunks, { type: mimeType });
 			const videoUrl = URL.createObjectURL(videoBlob);
 
