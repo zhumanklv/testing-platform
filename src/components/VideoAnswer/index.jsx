@@ -107,6 +107,6 @@ const VideoAnswer = () => {
       </Box>
     </div>
   )
-}
+} 
 
 export default VideoAnswer
