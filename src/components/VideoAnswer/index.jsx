@@ -5,13 +5,13 @@ import {Box, Button} from '@mui/material';
 const mimeType = 'video/webm'
 const VideoAnswer = () => {
 
-	const mediaRecorder = useRef<MediaRecorder | null>(null);
+	const mediaRecorder = useRef(null);
 
-	const liveVideoFeed = useRef<{srcObject: MediaStream} | null>(null);
+	const liveVideoFeed = useRef(null);
 
 	const [recordingStatus, setRecordingStatus] = useState("inactive");
 
-	const [recordedVideo, setRecordedVideo] = useState<string>('');
+	const [recordedVideo, setRecordedVideo] = useState('');
 
 	const [videoChunks, setVideoChunks] = useState([]);
 
