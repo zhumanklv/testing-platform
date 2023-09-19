@@ -13,7 +13,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
-const URL = `http://freeimage.host/api/1/upload/?key=${process.env.NEXT_PUBLIC_API_KEY}`
+const URL = `https://freeimage.host/api/1/upload/?key=${process.env.NEXT_PUBLIC_API_KEY}`
 
 enum STEPS {
   FIRST, 
